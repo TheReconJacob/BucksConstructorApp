@@ -4,10 +4,17 @@
 #include <iostream>
 #include "GameObject.h"
 
+int GameObject::instances = 0;
 int main()
 {
-    GameObject obj1 = GameObject(45);
-    std::cout << obj1.id;
+    // GameObject obj1 = GameObject();
+    GameObject obj2 = GameObject(45);
+    GameObject obj3 = GameObject(1);
+    GameObject obj4 = GameObject(3);
+    GameObject obj5 = GameObject(4);
+
+    std::cout << GameObject::instances;
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
