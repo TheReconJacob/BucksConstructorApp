@@ -1,22 +1,21 @@
 #pragma once
+#include "Location.h"
 class GameObject
 {
 
 public:
 static int instances;
+Location* location;
 
 private:
 	int id;
 
-	GameObject() {
-		id = 0;
-		instances++;
-	}
-
 public:
-	GameObject(int invokedId) {
+	GameObject(int invokedId, Location* objectLocation) {
 		id = invokedId;
 		instances++;
+		location = objectLocation;
+		location->Display();
 	}
 };
 

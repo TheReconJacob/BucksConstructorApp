@@ -141,9 +141,11 @@
   <ItemGroup>
     <ClCompile Include="BucksConstructorApp.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="Location.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="Location.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

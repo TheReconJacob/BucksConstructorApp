@@ -8,12 +8,12 @@ int GameObject::instances = 0;
 int main()
 {
     // GameObject obj1 = GameObject();
-    GameObject obj2 = GameObject(45);
-    GameObject obj3 = GameObject(1);
-    GameObject obj4 = GameObject(3);
-    GameObject obj5 = GameObject(4);
+    GameObject obj2 = GameObject(45, new Location(1,1,1));
+    GameObject obj3 = GameObject(1, new Location(2,2,2));
+    GameObject obj4 = GameObject(3, new Location(3,3,3));
+    GameObject obj5 = GameObject(4, new Location(4,4,4));
 
-    std::cout << GameObject::instances;
+    std::cout << "The total instances are: " << GameObject::instances;
 
 }
 
