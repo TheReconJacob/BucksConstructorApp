@@ -3,18 +3,26 @@
 class Location
 {
 	public:
-		int x = 0;
-		int y = 0;
-		int z = 0;
+		int x;
+		int y;
+		int z;
 
 		Location(int instanceX, int instanceY, int instanceZ) {
 			Set(instanceX, instanceY, instanceZ);
 		}
-		void Display() {
-			std::cout << "The location is at: " << x << ", " << y << ", " << z << "\n";
+
+		Location(const Location& location)
+		{
+			this->x = location.x;
+			this->y = location.y;
+			this->z = location.z;
 		}
 
-		void Set(int instanceX, int instanceY, int instanceZ) {
+		void Display() {
+			std::cout << "The location is at: " << x << ", " << y << ", " << z << std::endl;
+		}
+
+		void Set(const int instanceX, const int instanceY, const int instanceZ) {
 			x = instanceX;
 			y = instanceY;
 			z = instanceZ;

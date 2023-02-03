@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include "GameObject.h"
+#include "HealthKit.h"
 
 int GameObject::instances = 0;
 int main()
@@ -12,8 +13,18 @@ int main()
     GameObject obj3 = GameObject(1, new Location(2,2,2));
     GameObject obj4 = GameObject(3, new Location(3,3,3));
     GameObject obj5 = GameObject(4, new Location(4,4,4));
+    GameObject obj6 = obj4;
+    
+    obj4.location->Set(8, 8, 8);
+    obj4.location->Display();
+    obj6.location->Display();
 
-    std::cout << "The total instances are: " << GameObject::instances;
+    std::cout << "The total instances are: " << GameObject::instances << std::endl;
+
+
+    HealthKit healthKit = HealthKit(1, new Location(9, 9, 9));
+
+
 
 }
 
